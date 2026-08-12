@@ -153,6 +153,15 @@ const config: Config = {
       additionalLanguages: ['java', 'bash', 'json', 'markup'],
     },
   } satisfies Preset.ThemeConfig,
+  plugins: [
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-ZP8Y46NZFD',
+        anonymizeIP: true,
+      },
+    ],
+  ],
 };
 
 export default config;
