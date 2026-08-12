@@ -53,7 +53,7 @@ TangoDB started with a simple question:
 > **How far can modern Java be pushed when building a high-performance storage engine?**
 
 
-V1.0.0 is the first step toward answering that question.
+v0.1.0 is the first step toward answering that question.
 
 The current implementation establishes the core storage-engine pipeline — from concurrent writes and off-heap memory to immutable MemTables, asynchronous flushing, SSTables, and compaction — while providing a measurable performance baseline.
 
