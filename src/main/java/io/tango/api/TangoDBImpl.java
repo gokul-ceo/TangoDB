@@ -2,10 +2,21 @@ package io.tango.api;
 
 import io.tango.engine.StorageEngine;
 
-final class TangoDBImpl  implements TangoDB{
+/**
+ * Package-private implementation of the {@link TangoDB} interface delegating storage operations to {@link StorageEngine}.
+ *
+ * @author Gokul G
+ * @version 0.1.0
+ */
+final class TangoDBImpl implements TangoDB {
 
     private final StorageEngine engine;
 
+    /**
+     * Constructs a new {@code TangoDBImpl} wrapping a {@link StorageEngine} initialized with the given config.
+     *
+     * @param config non-null {@link TangoConfig} instance
+     */
     TangoDBImpl(TangoConfig config) {
         this.engine = new StorageEngine(config);
     }

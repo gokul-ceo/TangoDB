@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.tango</groupId>
+    <groupId>io.github.gokul-ceo</groupId>
     <artifactId>tangodb</artifactId>
     <version>0.1.0</version>
     <packaging>jar</packaging>
@@ -109,6 +109,15 @@
                         --enable-preview
                         --enable-native-access=ALL-UNNAMED
                     </argLine>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven-javadoc-plugin.version}</version>
+                <configuration>
+                    <additionalJOption>--enable-preview</additionalJOption>
+                    <show>public</show>
                 </configuration>
             </plugin>
             <plugin>
