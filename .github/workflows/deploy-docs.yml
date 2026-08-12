@@ -4,12 +4,14 @@ on:
   push:
     branches:
       - main
+      - master
     paths:
       - 'tangodb-site/**'
       - '.github/workflows/deploy-docs.yml'
   pull_request:
     branches:
       - main
+      - master
     paths:
       - 'tangodb-site/**'
       - '.github/workflows/deploy-docs.yml'
@@ -55,7 +57,7 @@ jobs:
         run: npm run build
 
       - name: Upload GitHub Pages Artifact
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'))
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./tangodb-site/build
@@ -63,7 +65,7 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'))
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
