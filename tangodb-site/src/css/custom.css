@@ -1,0 +1,296 @@
+/**
+ * TangoDB Theme Styles - Aligned with logo (Royal Blue #0052d4 + Vivid Orange #ff6d00)
+ */
+
+:root {
+  --ifm-color-primary: #ff6d00;
+  --ifm-color-primary-dark: #e66200;
+  --ifm-color-primary-darker: #cc5700;
+  --ifm-color-primary-darkest: #994100;
+  --ifm-color-primary-light: #ff7b1a;
+  --ifm-color-primary-lighter: #ff8a33;
+  --ifm-color-primary-lightest: #ffa866;
+  --ifm-code-font-size: 92%;
+  --ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 109, 0, 0.15);
+}
+
+/* Dark mode palette adjustments matched to Logo Royal Blue & Vivid Orange */
+[data-theme='dark'] {
+  --ifm-color-primary: #ff6d00;
+  --ifm-color-primary-dark: #e66200;
+  --ifm-color-primary-darker: #cc5700;
+  --ifm-color-primary-darkest: #994100;
+  --ifm-color-primary-light: #ff7b1a;
+  --ifm-color-primary-lighter: #ff8a33;
+  --ifm-color-primary-lightest: #ffa866;
+  --ifm-background-color: #080d1a;
+  --ifm-background-surface-color: #0f172a;
+  --ifm-navbar-background-color: rgba(8, 13, 26, 0.9);
+  --ifm-card-background-color: #121c33;
+}
+
+/* Navbar Logo Styling */
+.navbar__logo img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Glassmorphism Header */
+.navbar {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0, 82, 212, 0.2);
+}
+
+/* Hero Section Accents blending Royal Blue & Vivid Orange Logo Tones */
+.heroBanner {
+  padding: 4.5rem 0 5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 20%, rgba(0, 82, 212, 0.22) 0%, rgba(255, 109, 0, 0.12) 50%, rgba(8, 13, 26, 1) 85%);
+}
+
+.heroBannerTitle {
+  font-size: 3.8rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, #0052d4 0%, #3b82f6 35%, #ffffff 65%, #ff6d00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroBannerSubtitle {
+  font-size: 1.35rem;
+  color: #94a3b8;
+  max-width: 740px;
+  margin: 1rem auto 2rem;
+}
+
+/* Performance & Status Badges */
+.badge--perf {
+  display: inline-block;
+  background: rgba(0, 82, 212, 0.14);
+  border: 1px solid rgba(0, 82, 212, 0.4);
+  color: #60a5fa;
+  font-weight: 700;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.badge--version {
+  display: inline-block;
+  background: rgba(255, 109, 0, 0.15);
+  border: 1px solid rgba(255, 109, 0, 0.45);
+  color: #ff8a33;
+  font-weight: 800;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(255, 109, 0, 0.2);
+}
+
+/* Feature Cards with Dual-Glow Hover Accent */
+.featureCard {
+  background: var(--ifm-card-background-color);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.85rem;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  height: 100%;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 109, 0, 0.6);
+  box-shadow: 0 12px 32px rgba(0, 82, 212, 0.3);
+}
+
+.featureIcon {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+/* Quickstart Teaser Code Block */
+.codeTeaser {
+  max-width: 840px;
+  margin: 3rem auto 0;
+  text-align: left;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 82, 212, 0.3);
+}
+
+/* ==========================================================================
+   ADMONITION & ALERT HIGH-CONTRAST STYLING OVERRIDES
+   ========================================================================== */
+
+.theme-admonition,
+.alert,
+.admonition {
+  border-radius: 10px !important;
+  border-left-width: 5px !important;
+  border-left-style: solid !important;
+  padding: 1.25rem 1.5rem !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.75rem !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25) !important;
+  line-height: 1.6 !important;
+}
+
+.theme-admonition .admonition-heading,
+.theme-admonition h5,
+.alert .alert__heading,
+.alert h5,
+div[class*='admonitionHeading'] {
+  font-weight: 700 !important;
+  font-size: 1.05rem !important;
+  margin-bottom: 0.6rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+
+.theme-admonition p:last-child,
+.alert p:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* 1. WARNING & CAUTION (Vivid Orange) */
+.alert--warning,
+.alert--caution,
+.theme-admonition-warning,
+.theme-admonition-caution {
+  border-left-color: #ff6d00 !important;
+  background-color: rgba(255, 109, 0, 0.15) !important;
+  color: #ffedd5 !important;
+  border-top: 1px solid rgba(255, 109, 0, 0.25) !important;
+  border-right: 1px solid rgba(255, 109, 0, 0.25) !important;
+  border-bottom: 1px solid rgba(255, 109, 0, 0.25) !important;
+}
+
+.alert--warning .admonition-heading,
+.alert--warning h5,
+.theme-admonition-warning h5,
+.theme-admonition-warning div[class*='admonitionHeading'] {
+  color: #ff8a33 !important;
+}
+
+[data-theme='light'] .alert--warning,
+[data-theme='light'] .theme-admonition-warning {
+  background-color: #fff7ed !important;
+  color: #7c2d12 !important;
+  border-left-color: #e66200 !important;
+  border-top: 1px solid #ffedd5 !important;
+  border-right: 1px solid #ffedd5 !important;
+  border-bottom: 1px solid #ffedd5 !important;
+}
+
+[data-theme='light'] .alert--warning .admonition-heading,
+[data-theme='light'] .alert--warning h5,
+[data-theme='light'] .theme-admonition-warning h5 {
+  color: #cc5700 !important;
+}
+
+/* 2. INFO & NOTE (Royal Blue) */
+.alert--info,
+.alert--note,
+.theme-admonition-info,
+.theme-admonition-note {
+  border-left-color: #0052d4 !important;
+  background-color: rgba(0, 82, 212, 0.15) !important;
+  color: #bfdbfe !important;
+  border-top: 1px solid rgba(0, 82, 212, 0.25) !important;
+  border-right: 1px solid rgba(0, 82, 212, 0.25) !important;
+  border-bottom: 1px solid rgba(0, 82, 212, 0.25) !important;
+}
+
+.alert--info .admonition-heading,
+.alert--info h5,
+.theme-admonition-info h5,
+.theme-admonition-info div[class*='admonitionHeading'],
+.theme-admonition-note h5 {
+  color: #60a5fa !important;
+}
+
+[data-theme='light'] .alert--info,
+[data-theme='light'] .theme-admonition-info,
+[data-theme='light'] .theme-admonition-note {
+  background-color: #eff6ff !important;
+  color: #1e3a8a !important;
+  border-left-color: #2563eb !important;
+  border-top: 1px solid #bfdbfe !important;
+  border-right: 1px solid #bfdbfe !important;
+  border-bottom: 1px solid #bfdbfe !important;
+}
+
+[data-theme='light'] .alert--info .admonition-heading,
+[data-theme='light'] .alert--info h5,
+[data-theme='light'] .theme-admonition-info h5 {
+  color: #1d4ed8 !important;
+}
+
+/* 3. TIP & SUCCESS (Emerald Green) */
+.alert--success,
+.alert--tip,
+.theme-admonition-tip,
+.theme-admonition-success {
+  border-left-color: #10b981 !important;
+  background-color: rgba(16, 185, 129, 0.15) !important;
+  color: #a7f3d0 !important;
+  border-top: 1px solid rgba(16, 185, 129, 0.25) !important;
+  border-right: 1px solid rgba(16, 185, 129, 0.25) !important;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.25) !important;
+}
+
+.alert--tip .admonition-heading,
+.alert--tip h5,
+.theme-admonition-tip h5,
+.theme-admonition-tip div[class*='admonitionHeading'] {
+  color: #34d399 !important;
+}
+
+[data-theme='light'] .alert--tip,
+[data-theme='light'] .theme-admonition-tip {
+  background-color: #ecfdf5 !important;
+  color: #064e3b !important;
+  border-left-color: #059669 !important;
+  border-top: 1px solid #a7f3d0 !important;
+  border-right: 1px solid #a7f3d0 !important;
+  border-bottom: 1px solid #a7f3d0 !important;
+}
+
+/* 4. DANGER (Crimson Red) */
+.alert--danger,
+.theme-admonition-danger {
+  border-left-color: #ef4444 !important;
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  color: #fecaca !important;
+  border-top: 1px solid rgba(239, 68, 68, 0.25) !important;
+  border-right: 1px solid rgba(239, 68, 68, 0.25) !important;
+  border-bottom: 1px solid rgba(239, 68, 68, 0.25) !important;
+}
+
+.alert--danger .admonition-heading,
+.alert--danger h5,
+.theme-admonition-danger h5,
+.theme-admonition-danger div[class*='admonitionHeading'] {
+  color: #f87171 !important;
+}
+
+[data-theme='light'] .alert--danger,
+[data-theme='light'] .theme-admonition-danger {
+  background-color: #fef2f2 !important;
+  color: #7f1d1d !important;
+  border-left-color: #dc2626 !important;
+  border-top: 1px solid #fecaca !important;
+  border-right: 1px solid #fecaca !important;
+  border-bottom: 1px solid #fecaca !important;
+}
