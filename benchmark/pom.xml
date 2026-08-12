@@ -10,11 +10,11 @@
 
     <groupId>io.tango</groupId>
     <artifactId>tangodb-benchmark</artifactId>
-    <version>1.0</version>
+    <version>0.1.0</version>
 
     <properties>
-        <maven.compiler.source>24</maven.compiler.source>
-        <maven.compiler.target>24</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
@@ -31,7 +31,7 @@
         <dependency>
             <groupId>io.tango</groupId>
             <artifactId>tangodb</artifactId>
-            <version>1.0</version>
+            <version>0.1.0</version>
         </dependency>
 
 
