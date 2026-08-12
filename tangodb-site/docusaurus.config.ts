@@ -12,7 +12,7 @@ const config: Config = {
   },
 
   url: 'https://gokul-ceo.github.io',
-  baseUrl: '/tangodb-site/',
+  baseUrl: process.env.BASE_URL || '/tangodb-site/',
 
   organizationName: 'gokul-ceo',
   projectName: 'tangodb-site',

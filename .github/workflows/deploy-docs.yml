@@ -1,0 +1,75 @@
+name: Deploy Docusaurus Documentation
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'tangodb-site/**'
+      - '.github/workflows/deploy-docs.yml'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'tangodb-site/**'
+      - '.github/workflows/deploy-docs.yml'
+  workflow_dispatch:
+
+# Permissions required to deploy to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping in-progress runs if a new commit arrives
+concurrency:
+  group: 'pages'
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build Docusaurus Site
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: 'tangodb-site/package-lock.json'
+
+      - name: Install Dependencies
+        working-directory: ./tangodb-site
+        run: npm ci
+
+      - name: Check TypeScript Types
+        working-directory: ./tangodb-site
+        run: npm run typecheck
+
+      - name: Build Production Site
+        working-directory: ./tangodb-site
+        run: npm run build
+
+      - name: Upload GitHub Pages Artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./tangodb-site/build
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
