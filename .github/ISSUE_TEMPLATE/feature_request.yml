@@ -1,0 +1,38 @@
+name: 🚀 Feature Request
+description: Propose a new feature, optimization, or capability for TangoDB
+title: "[FEAT]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Suggest an idea or improvement for TangoDB!
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Is your feature request related to a problem?
+      description: A clear and concise description of what the problem or limitation is.
+      placeholder: I'm always frustrated when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: Describe the solution you'd like to see added to TangoDB.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe any alternative solutions or features you've considered.
+
+  - type: textarea
+    id: performance
+    attributes:
+      label: Performance & Architectural Impact
+      description: Will this feature affect read/write latency, memory consumption, disk I/O, or thread concurrency?

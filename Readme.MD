@@ -64,3 +64,19 @@ The goal from here is not to optimize for benchmark numbers blindly, but to unde
 This is the beginning of the experiment, not the end of it.
 
 > **Build. Measure. Understand. Optimize. Repeat.**
+
+---
+
+## Community & Open Source
+
+We welcome community contributions! Please check out the following resources to get involved:
+
+* **[Contributing Guidelines](CONTRIBUTING.md)**: Developer environment setup, coding guidelines, testing, and PR submission process.
+* **[Code of Conduct](CODE_OF_CONDUCT.md)**: Standards for a welcoming and inclusive community.
+* **[Security Policy](SECURITY.md)**: Guidelines for reporting security vulnerabilities.
+* **[Support Guide](SUPPORT.md)**: Where to ask questions and find support.
+
+## License
+
+TangoDB is open-source software released under the **[Apache License 2.0](LICENSE)**.
+
