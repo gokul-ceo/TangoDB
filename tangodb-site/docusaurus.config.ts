@@ -32,6 +32,10 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/gokul-ceo/TangoDB/tree/main/tangodb-site/',
         },
+        gtag: {
+          trackingID: 'G-YSRG63X4BH',
+          anonymizeIP: true,
+        },
         blog: false,
         theme: {
           customCss: './src/css/custom.css',
@@ -153,15 +157,6 @@ const config: Config = {
       additionalLanguages: ['java', 'bash', 'json', 'markup'],
     },
   } satisfies Preset.ThemeConfig,
-  plugins: [
-    [
-      '@docusaurus/plugin-google-gtag',
-      {
-        trackingID: 'G-YSRG63X4BH',
-        anonymizeIP: true,
-      },
-    ],
-  ],
 };
 
 export default config;
