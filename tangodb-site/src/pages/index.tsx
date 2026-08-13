@@ -73,7 +73,7 @@ function HomepageHeader() {
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
         <div className="badge--version margin-right--sm">
-          🏷️ Version v0.1.0 (Experimental)
+          🏷️ Version v0.1.1 (Experimental)
         </div>
         <div className="badge--perf margin-bottom--md">
           ⚠️ Experimental Status: APIs & Storage Formats May Change
@@ -83,10 +83,10 @@ function HomepageHeader() {
           🔥 JMH Scores: 53.2M ops/sec MemTable Put | 84.2 ops/sec 100K SSTable Flush
         </div>
         <Heading as="h1" className="heroBannerTitle margin-top--md">
-          {siteConfig.title} <span style={{fontSize: '2rem', verticalAlign: 'middle', color: '#ff6d00'}}>v0.1.0</span>
+          {siteConfig.title} <span style={{fontSize: '2rem', verticalAlign: 'middle', color: '#ff6d00'}}>v0.1.1</span>
         </Heading>
         <p className="heroBannerSubtitle">
-          TangoDB v0.1.0 is a high-performance embedded key-value storage engine built from scratch in modern Java.
+          TangoDB v0.1.1 is a high-performance embedded key-value storage engine built from scratch in modern Java.
         </p>
         <div className={styles.buttons}>
           <Link
@@ -107,7 +107,7 @@ function HomepageHeader() {
         </div>
 
         <div className="codeTeaser">
-          <CodeBlock language="java" title="TangoDB v0.1.0 Quick Example">
+          <CodeBlock language="java" title="TangoDB v0.1.1 Quick Example">
 {`// Initialize configuration with FFM native off-heap Arena
 TangoConfig config = TangoConfig.builder()
         .sstableDirectory(Path.of("data"))
@@ -134,8 +134,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} v0.1.0 - High-Performance Embedded Key-Value Storage`}
-      description="TangoDB v0.1.0 experimental high-performance embedded key-value storage engine built from scratch in modern Java using FFM API and off-heap memory.">
+      title={`${siteConfig.title} v0.1.1 - High-Performance Embedded Key-Value Storage`}
+      description="TangoDB v0.1.1 experimental high-performance embedded key-value storage engine built from scratch in modern Java using FFM API and off-heap memory.">
       <HomepageHeader />
       <main>
         <section className={styles.features}>

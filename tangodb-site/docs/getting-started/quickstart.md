@@ -26,7 +26,21 @@ java --version
 
 ## Installation / Build Setup
 
-To use TangoDB in your Java project, include the artifact or build the JAR using Apache Maven:
+TangoDB is published on **Maven Central**. You can directly include the dependency in your project or build from source.
+
+### Maven Central Dependency
+
+Add the following dependency to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>io.github.gokul-ceo</groupId>
+    <artifactId>tangodb</artifactId>
+    <version>0.1.1</version>
+</dependency>
+```
+
+### Building from Source
 
 ```bash
 # Clone the repository
@@ -35,16 +49,6 @@ cd TangoDB
 
 # Build the project
 mvn clean package -DskipTests
-```
-
-### Maven Dependency
-
-```xml
-<dependency>
-    <groupId>io.tango</groupId>
-    <artifactId>tangodb</artifactId>
-    <version>0.1.0</version>
-</dependency>
 ```
 
 ---
