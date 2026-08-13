@@ -6,7 +6,7 @@ import io.tango.engine.StorageEngine;
  * Package-private implementation of the {@link TangoDB} interface delegating storage operations to {@link StorageEngine}.
  *
  * @author Gokul G
- * @version 0.1.0
+ * @version 0.1.1
  */
 final class TangoDBImpl implements TangoDB {
 

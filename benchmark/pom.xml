@@ -8,9 +8,9 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.tango</groupId>
+    <groupId>io.github.gokul-ceo</groupId>
     <artifactId>tangodb-benchmark</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -29,9 +29,9 @@
 
 
         <dependency>
-            <groupId>io.tango</groupId>
+            <groupId>io.github.gokul-ceo</groupId>
             <artifactId>tangodb</artifactId>
-            <version>0.1.0</version>
+            <version>0.1.1</version>
         </dependency>
 
 

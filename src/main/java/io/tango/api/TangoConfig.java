@@ -9,7 +9,7 @@ import java.nio.file.Path;
  * </p>
  *
  * @author Gokul G
- * @version 0.1.0
+ * @version 0.1.1
  */
 public final class TangoConfig {
 

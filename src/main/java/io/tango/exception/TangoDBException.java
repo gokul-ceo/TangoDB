@@ -4,7 +4,7 @@ package io.tango.exception;
  * Base runtime exception thrown for any unrecoverable storage engine or I/O failure in TangoDB.
  *
  * @author Gokul G
- * @version 0.1.0
+ * @version 0.1.1
  */
 public class TangoDBException extends RuntimeException {
 

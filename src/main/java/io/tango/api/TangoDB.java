@@ -21,7 +21,7 @@ package io.tango.api;
  * }</pre>
  *
  * @author Gokul G
- * @version 0.1.0
+ * @version 0.1.1
  */
 public interface TangoDB extends AutoCloseable {
 
